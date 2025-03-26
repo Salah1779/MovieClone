@@ -1,14 +1,10 @@
 import { useState } from 'react';
 
-interface NavigationButtonsProps {
-  labels: string[];
-  setSelected: (label: string) => void;
-}
 
-export const NavigationButtons = ({ labels, setSelected }: NavigationButtonsProps) => {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+export const NavigationButtons = ({ labels, setSelected }) => {
+  const [activeIndex, setActiveIndex] = useState(null);
 
-  const handleButtonClick = (label: string, index: number) => {
+  const handleButtonClick = (label, index) => {
     setSelected(label);
     setActiveIndex(index);
   };

@@ -1,7 +1,7 @@
 
 import { API_URL } from './constants';
 
-export const fetchAPI= async (endpoint: string) => {
+export const fetchAPI= async endpoint => {
 try {
     const response = await fetch(`${API_URL}/${endpoint}`, {
       method: 'GET',
