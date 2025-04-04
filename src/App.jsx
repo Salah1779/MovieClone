@@ -44,11 +44,11 @@ const App = () => {
   return (
     <div className="bg-blue-950 min-h-screen p-8">
       <NavigationButtons labels={['most-popular-movies', 'top250-movies', 'top-box-office']} setSelected={setSelected} />
-
-      <h1 className="text-3xl font-bold text-white text-center mb-8">{selected}</h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {currentMovies.map((movie) => (
+          movie.primaryImage && (
           <MovieCard key={movie.id} movie={movie} />
+          )
         ))}
       </div>
    
